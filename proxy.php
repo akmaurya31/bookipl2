@@ -15,6 +15,8 @@ $data = json_decode(substr($response, 47, -2), true);
 // Step 5: अब rows पढ़ो
 $rows = $data['table']['rows'];
 
+ 
+
 // Step 6: अब $rows को loop कर लो
 foreach ($rows as $row) {
     $payment_method = $row['c'][0]['v'] ?? '';
