@@ -1,9 +1,13 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script>
 $(document).ready(function () {
     // Step 1: Get and store the match time only once
-    const matchDateText = $('#matchDateText').text().trim();
+    const matchDateText = $('.matchDateText').text().trim();
+    console.log('MmatchDateTextd:',matchDateText);  // Optional: Debug ke liye
+
     
     // Clean the text
     const matchDateStr = matchDateText.split(' ').slice(1).join(' ').replace('IST', '').trim();
@@ -11,11 +15,12 @@ $(document).ready(function () {
     const year = new Date().getFullYear(); // Current year
     const matchTime = new Date(matchDateStr + " " + year); // 🔒 Lock kar diya yahan
 
-    console.log('Match Time Locked:', matchTime);  // Optional: Debug ke liye
-
     function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = matchTime.getTime() - now; // 🔒 Yahi purana matchTime use hoga hamesha
+
+         console.log('Match timeLeft Locked:', timeLeft);  // Optional: Debug ke liye
+
 
         if (timeLeft <= 0) {
             $('#countdown').html("<p class='text-center text-white text-lg font-bold'>Match Started!</p>");

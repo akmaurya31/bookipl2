@@ -49,7 +49,6 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
 <body>
     <div id="root">
         <div class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen pb-16 md:pb-0">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <style jsx="true">
                 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -186,7 +185,7 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                             </div>
                             <div class="mt-6 pt-6 border-t border-white/10">
                                 <div class="text-center mb-4">
-                                    <p id="matchDateText" class="text-lg text-white flex items-center justify-center gap-2 "><i class="fa-regular fa-calendar"></i>01 May , Thu, 07:30 PM IST</p>
+                                    <p id="matchDateText" class="matchDateText "><i class="fa-regular fa-calendar"></i>01 May , Thu, 07:30 PM IST</p>
                                     <p class="text-blue-200 flex items-center justify-center gap-2 mt-1"><i class="fa-solid fa-location-dot"></i>Sawai Mansingh Stadium, Jaipur, Rajasthan</p>
                                 </div>
 
@@ -229,35 +228,7 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
 
 
 
-
-                                <script>
-                                    const matchTime = new Date("01 May , Thu 07:30 PM").getTime();
-
-                                    function updateCountdown() {
-                                        const now = new Date().getTime();
-                                        const timeLeft = matchTime - now;
-
-                                        if (timeLeft <= 0) {
-                                            document.getElementById("countdown").innerHTML = "<p class='text-center text-white text-lg font-bold'>Match Started!</p>";
-                                            return;
-                                        }
-
-                                        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                                        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                                        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                                        document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                                        document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                                        document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                                        document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-                                    }
-
-                                    // Run every second
-                                    setInterval(updateCountdown, 1000);
-                                    updateCountdown();
-                                </script>
-
+ 
 
 
                             </div>

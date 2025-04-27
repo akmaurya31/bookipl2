@@ -1,4 +1,4 @@
-
+<?php include('comjs.php'); ?>
 <!-- saved from url=(0056)https://cheap.get-ipl-ticket-seller.com/ticket.php?id=52 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -177,7 +177,7 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                             </div>
                             <div class="mt-6 pt-6 border-t border-white/10">
                                 <div class="text-center mb-4">
-                                    <p class="text-lg text-white flex items-center justify-center gap-2"><i class="fa-regular fa-calendar"></i>03 May , Sat, 07:30 PM IST</p>
+                                    <p class="matchDateText"><i class="fa-regular fa-calendar"></i>03 May , Sat, 07:30 PM IST</p>
                                     <p class="text-blue-200 flex items-center justify-center gap-2 mt-1"><i class="fa-solid fa-location-dot"></i>M.Chinnaswamy Stadium, Bengaluru, Karnataka</p>
                                 </div>
 
@@ -188,25 +188,25 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                 <div class="grid grid-cols-4 gap-4 mt-6 max-w-md mx-auto" id="countdown">
                                     <div class="text-center">
                                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                                            <div class="text-2xl md:text-3xl font-bold text-white" id="days">NaN</div>
+                                            <div class="text-2xl md:text-3xl font-bold text-white" id="days"></div>
                                             <div class="text-xs text-blue-200 mt-1">days</div>
                                         </div>
                                     </div>
                                     <div class="text-center">
                                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                                            <div class="text-2xl md:text-3xl font-bold text-white" id="hours">NaN</div>
+                                            <div class="text-2xl md:text-3xl font-bold text-white" id="hours"></div>
                                             <div class="text-xs text-blue-200 mt-1">hrs</div>
                                         </div>
                                     </div>
                                     <div class="text-center">
                                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                                            <div class="text-2xl md:text-3xl font-bold text-white" id="minutes">NaN</div>
+                                            <div class="text-2xl md:text-3xl font-bold text-white" id="minutes"></div>
                                             <div class="text-xs text-blue-200 mt-1">mins</div>
                                         </div>
                                     </div>
                                     <div class="text-center">
                                         <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                                            <div class="text-2xl md:text-3xl font-bold text-white" id="seconds">NaN</div>
+                                            <div class="text-2xl md:text-3xl font-bold text-white" id="seconds"></div>
                                             <div class="text-xs text-blue-200 mt-1">secs</div>
                                         </div>
                                     </div>
@@ -221,34 +221,7 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
 
 
 
-                                <script>
-                                    const matchTime = new Date("03 May , Sat 07:30 PM").getTime();
-
-                                    function updateCountdown() {
-                                        const now = new Date().getTime();
-                                        const timeLeft = matchTime - now;
-
-                                        if (timeLeft <= 0) {
-                                            document.getElementById("countdown").innerHTML = "<p class='text-center text-white text-lg font-bold'>Match Started!</p>";
-                                            return;
-                                        }
-
-                                        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                                        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                                        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                                        document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                                        document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                                        document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                                        document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-                                    }
-
-                                    // Run every second
-                                    setInterval(updateCountdown, 1000);
-                                    updateCountdown();
-                                </script>
-
+                             
 
 
                             </div>
