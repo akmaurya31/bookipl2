@@ -24,10 +24,22 @@ foreach ($rows as $row) {
     $bank_name = $row['c'][4]['v'] ?? '';
     $payment_status = $row['c'][5]['v'] ?? '';
     $note = $row['c'][6]['v'] ?? '';
-    $qrid = $row['c'][7]['v'] ?? '';
+    $qurl = $row['c'][7]['v'] ?? '';
 
     //echo "Payment Method: $payment_method, Account Holder: $account_holder, Account Number: $account_number, IFSC Code: $ifsc_code, Bank Name: $bank_name, Payment Status: $payment_status, Note: $note <br>";
 }
+
+// https://drive.google.com/file/d/10NhuGiqoppn2U97vJXyXXLeZh1zWRyJC/view?usp=drivesdk
+
+preg_match('/\/d\/(.*?)\//', $qurl, $matches);
+
+if (isset($matches[1])) {
+    $qrid = $matches[1];
+    // echo "File ID: " . $fileId;
+} else {
+    // echo "File ID not found.";
+}
+
 
 // print_r($qrid);
 // die("fsdfs");

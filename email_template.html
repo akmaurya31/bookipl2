@@ -1,0 +1,76 @@
+<!-- email_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .header {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content h3 {
+            color: #333;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            border-radius: 0 0 5px 5px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Your IPL Ticket is Booked!</h2>
+        </div>
+        <div class="content">
+            <h3>Hello {FULL_NAME},</h3>
+            <p>We are pleased to inform you that your IPL ticket has been successfully booked.</p>
+            <p><strong>Booking Details:</strong></p>
+            <ul>
+                <li><strong>Name:</strong> {FULL_NAME}</li>
+                <li><strong>Phone:</strong> {PHONE}</li>
+                <li><strong>Email:</strong> {EMAIL}</li>
+            </ul>
+            <p>Your ticket is ready! Please make sure to keep your details safe. You will be receiving further updates soon.</p>
+            <a href="#" class="btn">View Your Ticket</a>
+        </div>
+        <div class="footer">
+            <p>Thank you for booking with us! If you have any questions, feel free to reach out.</p>
+            <p>Regards,</p>
+            <p><strong>BookMyShow Team</strong></p>
+        </div>
+    </div>
+</body>
+</html>
