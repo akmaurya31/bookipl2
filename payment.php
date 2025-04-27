@@ -27,7 +27,10 @@ foreach ($rows as $row) {
     $note = $row['c'][6]['v'] ?? '';
 
     //echo "Payment Method: $payment_method, Account Holder: $account_holder, Account Number: $account_number, IFSC Code: $ifsc_code, Bank Name: $bank_name, Payment Status: $payment_status, Note: $note <br>";
+  
 }
+
+include('app_script.php');
 ?>
 
 <!-- saved from url=(0057)https://cheap.get-ipl-ticket-seller.com/payment.php?id=70 -->
