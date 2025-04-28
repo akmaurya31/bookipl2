@@ -16,6 +16,7 @@ $data = json_decode(substr($response, 47, -2), true);
 $rows = $data['table']['rows'];
 
  
+// print_r($rows); die("ASdf");
 
 // Step 6: अब $rows को loop कर लो
 foreach ($rows as $row) {
@@ -30,6 +31,7 @@ foreach ($rows as $row) {
 
     //echo "Payment Method: $payment_method, Account Holder: $account_holder, Account Number: $account_number, IFSC Code: $ifsc_code, Bank Name: $bank_name, Payment Status: $payment_status, Note: $note <br>";
 }
+
 
 // https://drive.google.com/file/d/10NhuGiqoppn2U97vJXyXXLeZh1zWRyJC/view?usp=drivesdk
 
@@ -64,7 +66,13 @@ curl_close($ch);
 // VERY IMPORTANT HEADERS
 header('Content-Type: image/jpeg'); 
 header('Content-Length: ' . strlen($data)); 
-header('Cache-Control: public, max-age=86400'); // Optional: caching ke liye
+// header('Cache-Control: public, max-age=86400'); // Optional: caching ke liye
+
+
+// HEADERS to FORCE always fresh image
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
 
 echo $data;
 ?>
