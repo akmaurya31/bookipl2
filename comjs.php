@@ -15,7 +15,7 @@ $(document).ready(function () {
     const year = new Date().getFullYear(); // Current year
     const matchTime = new Date(matchDateStr + " " + year); // 🔒 Lock kar diya yahan
 
-    function updateCountdown1() {
+    function updateCountdown12() {
         const now = new Date().getTime();
         const timeLeft = matchTime.getTime() - now; // 🔒 Yahi purana matchTime use hoga hamesha
 
