@@ -19,7 +19,7 @@ $(document).ready(function () {
         const now = new Date().getTime();
         const timeLeft = matchTime.getTime() - now; // 🔒 Yahi purana matchTime use hoga hamesha
 
-         console.log('Match timeLeft Locked:', timeLeft);  // Optional: Debug ke liye
+         console.log('Match timeLeft Locked comjs:',timeLeft,now);  // Optional: Debug ke liye
 
 
         if (timeLeft <= 0) {

@@ -41,6 +41,7 @@ $(document).ready(function () {
     function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = matchTime.getTime() - now;
+        console.log('Match timeLeft Locked comjs1:',timeLeft,now);  // Optional: Debug ke liye
         
         if (timeLeft <= 0) {
             $('#countdown').html("<p class='text-center text-white text-lg font-bold'>Match Started!</p>");

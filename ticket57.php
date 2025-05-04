@@ -225,6 +225,8 @@ src="https://www.facebook.com/tr?id=661642293008712&ev=PageView&noscript=1"
                                     function updateCountdown() {
                                         const now = new Date().getTime();
                                         const timeLeft = matchTime - now;
+                                        console.log('Match timeLeft Locked L57:',timeLeft,now);  // Optional: Debug ke liye
+
 
                                         if (timeLeft <= 0) {
                                             document.getElementById("countdown").innerHTML = "<p class='text-center text-white text-lg font-bold'>Match Started!</p>";
