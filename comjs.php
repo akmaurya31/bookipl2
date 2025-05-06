@@ -15,7 +15,7 @@ $(document).ready(function () {
     const year = new Date().getFullYear(); // Current year
     const matchTime = new Date(matchDateStr + " " + year); // 🔒 Lock kar diya yahan
 
-    function updateCountdown12() {
+    function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = matchTime.getTime() - now; // 🔒 Yahi purana matchTime use hoga hamesha
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
         $('#seconds').text(seconds.toString().padStart(2, '0'));
     }
 
-    //setInterval(updateCountdown, 1000);
-    //updateCountdown();
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 });
 </script>
