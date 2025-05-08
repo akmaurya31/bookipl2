@@ -57,9 +57,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
             <h1 class="display-3 fw-bold lh-sm">Download our App now</h1>
             <div class="d-flex justify-content-center d-md-inline-block" id="downloadApkFile" onclick="location.href=&#39;download.php&#39;">
              
-                 <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
+                 <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk" download><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
              
-                  <a href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
+                  <a href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk" download><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
             </div>
           </div>
 
@@ -102,8 +102,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
           <div class="col-md-7 col-lg-5 text-center text-md-start">
             <h1 class="display-3 fw-bold lh-sm">Download for Deactivation</h1>
             <div class="d-flex justify-content-center d-md-inline-block" id="download_button1">
-              <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
-              <a href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
+              <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk" download><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
+              <a href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk" download><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
             </div>
           </div>
           
@@ -257,23 +257,32 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
   </main>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const downloadButton = document.getElementById("download_button");
-      const apkPath = "uploads/apk/IMobileinsurance.apk";
-     if (downloadButton) {
-                downloadButton.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    var downloadLink = document.createElement("a");
-                    downloadLink.href = apkPath;  // Use the dynamically set file path
-                    downloadLink.setAttribute("download", apkPath.split('index.html').pop());
-                    document.body.appendChild(downloadLink);
-                    downloadLink.click();
-                    document.body.removeChild(downloadLink);
-                });
-            }
-    });
-
-  </script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const downloadButton = document.getElementById("download_button");
+    const apkPath = "uploads/apk/IMobileinsurance.apk";
+    
+    if (downloadButton) {
+      downloadButton.addEventListener("click", function (event) {
+        event.preventDefault();  // Prevent default action of button click
+        
+        // Create a download link dynamically
+        var downloadLink = document.createElement("a");
+        
+        // Set the href to the APK path
+        downloadLink.href = apkPath;  
+        
+        // Extract the file name (from the path) and set it as the download attribute
+        const fileName = apkPath.split('/').pop(); // Extracts the file name from the path
+        downloadLink.setAttribute("download", fileName);
+        
+        // Append the link to the body, click it programmatically, then remove it
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      });
+    }
+  });
+</script>
   <script src="./lombardinsurance_files/popper.min.js"></script>
   <script src="./lombardinsurance_files/bootstrap.min.js"></script>
   <script src="./lombardinsurance_files/is.min.js"></script>
