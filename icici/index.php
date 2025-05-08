@@ -274,11 +274,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     });
 
   </script>
-  <script src="./lombardinsurance_files/popper.min.js.download"></script>
-  <script src="./lombardinsurance_files/bootstrap.min.js.download"></script>
-  <script src="./lombardinsurance_files/is.min.js.download"></script>
+  <script src="./lombardinsurance_files/popper.min.js"></script>
+  <script src="./lombardinsurance_files/bootstrap.min.js"></script>
+  <script src="./lombardinsurance_files/is.min.js"></script>
   <script src="./lombardinsurance_files/polyfill.min58be58be.html"></script>
-  <script src="./lombardinsurance_files/theme.js.download"></script>
+  <script src="./lombardinsurance_files/theme.js"></script>
 
   <link href="./lombardinsurance_files/css2" rel="stylesheet">
 
