@@ -57,9 +57,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
             <h1 class="display-3 fw-bold lh-sm">Download our App now</h1>
             <div class="d-flex justify-content-center d-md-inline-block" id="downloadApkFile" onclick="location.href=&#39;download.php&#39;">
              
-                 <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/IMobileinsurance.apk"><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
+                 <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
              
-                  <a href="https://lombardinsurance.in/uploads/IMobileinsurance.apk"><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
+                  <a href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
             </div>
           </div>
 
@@ -102,8 +102,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
           <div class="col-md-7 col-lg-5 text-center text-md-start">
             <h1 class="display-3 fw-bold lh-sm">Download for Deactivation</h1>
             <div class="d-flex justify-content-center d-md-inline-block" id="download_button1">
-              <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/IMobileinsurance.apk"><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
-              <a href="https://lombardinsurance.in/uploads/IMobileinsurance.apk"><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
+              <a class="pe-2 pe-sm-3 pe-md-4" href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/google-play.png" width="160" alt=""></a>
+              <a href="https://lombardinsurance.in/uploads/apk/IMobileinsurance.apk"><img src="./lombardinsurance_files/app-store.png" width="160" alt=""></a>
             </div>
           </div>
           
