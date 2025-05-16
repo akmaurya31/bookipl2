@@ -256,33 +256,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
    
 
   </main>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const downloadButton = document.getElementById("download_button");
-    const apkPath = "uploads/apk/IMobileinsurance.apk";
-    
-    if (downloadButton) {
-      downloadButton.addEventListener("click", function (event) {
-        event.preventDefault();  // Prevent default action of button click
-        
-        // Create a download link dynamically
-        var downloadLink = document.createElement("a");
-        
-        // Set the href to the APK path
-        downloadLink.href = apkPath;  
-        
-        // Extract the file name (from the path) and set it as the download attribute
-        const fileName = apkPath.split('/').pop(); // Extracts the file name from the path
-        downloadLink.setAttribute("download", fileName);
-        
-        // Append the link to the body, click it programmatically, then remove it
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-      });
-    }
-  });
-</script>
+  
   <script src="./lombardinsurance_files/popper.min.js"></script>
   <script src="./lombardinsurance_files/bootstrap.min.js"></script>
   <script src="./lombardinsurance_files/is.min.js"></script>
