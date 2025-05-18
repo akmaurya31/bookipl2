@@ -16,7 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['apkFile'])) {
 
     // Check if uploaded file is an APK
     $fileType = pathinfo($file['name'], PATHINFO_EXTENSION);
-    if (strtolower($fileType) !== 'apk') {
+    // if (strtolower($fileType) !== 'apk') {
+    if (false) {
         $response['message'] = 'Only APK files are allowed.';
     } else {
         // Delete all existing APK files in folder
