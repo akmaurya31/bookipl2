@@ -241,7 +241,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
           <div class="col-sm-10 col-md-6 col-lg-6 text-center text-md-start">
             <h6 class="fw-bold fs-4 display-3 lh-sm"> Meet Client Satisfaction by using product</h6>
             <br>
-            <img src="./lombardinsurance_files/bb1.jpg" height="">
+            <img src="./lombardinsurance_files/sbi1.png" height="">
           </div>
 
           <div class="col-sm-10 col-md-5 col-lg-5  offset-md-1 order-md-0 text-center text-md-start">
