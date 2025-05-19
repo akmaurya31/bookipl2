@@ -76,7 +76,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
         <div class="row align-items-center">
           <div class="col-md-5 col-lg-6 order-md-1 text-center text-md-end"><img class="img-fluid" src="./lombardinsurance_files/steps-component.webp" alt=""></div>
           <div class="col-md-7 col-lg-6 text-center text-md-start py-2"><span class="py-2 badge bg-success rounded-pill text-white align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-75 w-sm-50 w-md-75 w-xl-50 mb-3">#1
-              Health Insurance App of 2024
+              Health Insurance App of 2025
               <img class="img-fluid float-start me-3" src="./lombardinsurance_files/arrow-right.png" alt=""></span>
             <h1 class="mb-4 display-3 fw-bold lh-sm">Best app for your <br class="d-block d-lg-none d-xl-block">modern
               lifestyle</h1>
