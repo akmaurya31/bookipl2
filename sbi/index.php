@@ -33,7 +33,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       <div class="container">
         <a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="#">
           <div>
-            <img src="./lombardinsurance_files/i.png" height="100px"></div>
+            <img src="./lombardinsurance_files/i.png" width="130px" height=""></div>
         </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
@@ -47,7 +47,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 
-    <section class="">
+    <section class="py-2">
      <p><br></p> 
       <div class="container">
       
@@ -68,14 +68,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 
-    <section class="py-0" id="home">
+    <section class="py-2" id="home">
       <div class="bg-holder" style="background-position:bottom;background-size:cover;">
       </div>
 
       <div class="container position-relative">
         <div class="row align-items-center">
           <div class="col-md-5 col-lg-6 order-md-1 text-center text-md-end"><img class="img-fluid" src="./lombardinsurance_files/steps-component.webp" alt=""></div>
-          <div class="col-md-7 col-lg-6 text-center text-md-start"><span class="badge bg-success rounded-pill text-white align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-75 w-sm-50 w-md-75 w-xl-50 mb-3">#1
+          <div class="col-md-7 col-lg-6 text-center text-md-start py-2"><span class="py-2 badge bg-success rounded-pill text-white align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-75 w-sm-50 w-md-75 w-xl-50 mb-3">#1
               Health Insurance App of 2024
               <img class="img-fluid float-start me-3" src="./lombardinsurance_files/arrow-right.png" alt=""></span>
             <h1 class="mb-4 display-3 fw-bold lh-sm">Best app for your <br class="d-block d-lg-none d-xl-block">modern
@@ -241,7 +241,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
           <div class="col-sm-10 col-md-6 col-lg-6 text-center text-md-start">
             <h6 class="fw-bold fs-4 display-3 lh-sm"> Meet Client Satisfaction by using product</h6>
             <br>
-            <img src="./lombardinsurance_files/sbi1.png" height="">
+            <img src="./lombardinsurance_files/sbi1.webp" height="" width="100%">
           </div>
 
           <div class="col-sm-10 col-md-5 col-lg-5  offset-md-1 order-md-0 text-center text-md-start">
