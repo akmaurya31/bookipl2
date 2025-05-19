@@ -7,11 +7,11 @@
 
   <meta name="author" content="">
 	<meta name="robots" content="">
-	<meta name="keywords" content="i mobile insurance policy online">
+	<meta name="keywords" content="SBI General Insurance  policy online">
 	<meta name="description" content="#1 Health Insurance App of 2025. Best app for your modern lifestyle. Live worry free with comprehensive insurance plans.">
 	
 
-  <title>iMobile Insurance</title>
+  <title>SBI General Insurance </title>
   <link rel="shortcut icon" type="image/x-icon" href="https://lombardinsurance.online/assets/img/favicons/fav.png">
   <link href="./lombardinsurance_files/theme.css" rel="stylesheet">
 <style>
