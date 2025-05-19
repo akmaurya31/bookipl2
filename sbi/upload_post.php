@@ -2,7 +2,7 @@
 $response = ['status' => 'error', 'message' => 'Unknown error'];
 
 $uploadDir = __DIR__ . '/uploads/apk/';
-$finalFilename = 'IMobileinsurance.apk';
+$finalFilename = 'SBIGeneralInsurance.apk';
 $targetFile = $uploadDir . $finalFilename;
 
 // Create folder if it doesn't exist
